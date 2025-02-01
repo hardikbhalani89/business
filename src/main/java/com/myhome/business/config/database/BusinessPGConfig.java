@@ -13,7 +13,7 @@ public class BusinessPGConfig {
 
     @Primary
     @Bean(name="businessPGDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource")
+    //@ConfigurationProperties(prefix = "spring.datasource")
     public DataSource businessPGDataSource(){
         return DataSourceBuilder.create().build();
     }
