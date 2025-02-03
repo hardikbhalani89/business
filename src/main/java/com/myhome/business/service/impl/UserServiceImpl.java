@@ -11,16 +11,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-   /* @Autowired
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
-    private UserConverter userConverter;*/
+    private UserConverter userConverter;
 
     @Override
     public UserResponse findOne(Integer userId) {
         UserResponse response = new UserResponse();
-       // response.setUser(userConverter.fromEntity(userRepository.findById(userId).orElse(new User())));
+        response.setUser(userConverter.fromEntity(userRepository.findById(userId).orElse(new User())));
         return response;
     }
 

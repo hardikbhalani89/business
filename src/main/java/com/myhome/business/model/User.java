@@ -1,12 +1,10 @@
 package com.myhome.business.model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.annotation.Id;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table (name="user")
+@Table (name="user", schema = "myhomebusiness")
 public class User {
 
     @Id

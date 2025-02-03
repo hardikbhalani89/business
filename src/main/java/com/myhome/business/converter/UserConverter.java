@@ -2,9 +2,9 @@ package com.myhome.business.converter;
 
 import com.myhome.business.model.User;
 import com.myhome.business.model.UserDTO;
+import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
+@Component
 public class UserConverter {
 
     public User fromDto(UserDTO dto){
