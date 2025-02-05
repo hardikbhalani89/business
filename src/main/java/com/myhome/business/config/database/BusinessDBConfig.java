@@ -1,6 +1,5 @@
 package com.myhome.business.config.database;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -9,12 +8,12 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 @Configuration
-public class BusinessPGConfig {
+public class BusinessDBConfig {
 
     @Primary
-    @Bean(name="businessPGDataSource")
+    @Bean(name="businessDataSource")
     @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource businessPGDataSource(){
+    public DataSource businessDataSource(){
         return DataSourceBuilder.create().build();
     }
 }
